@@ -64,18 +64,16 @@ class App extends Component {
         </header>
         <div className="uploadForm">
           <h3>Upload Image</h3>
-          <input
-            type="file"
-          />
+          <input type="file" onChange={e => this.setState({ image: e.target.files[0] })} />
+
+
           <button className="button" onClick={this.postImg}>Click to identify</button>
         </div>
 
         <h3 style={{ marginTop: 50 }}>{this.state.identification}</h3>
       <div className="uploadForm">
         <h3 style={{ marginTop: 50 }}> Upload text Image</h3>
-        <input
-          type="file"
-        />
+        <input type="file" onChange={e => this.setState({ imageT: e.target.files[0] })} />
         <button className="button" onClick={this.postImgText}>Click to identify</button>
       </div>
 
